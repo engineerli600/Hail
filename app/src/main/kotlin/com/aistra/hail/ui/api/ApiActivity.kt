@@ -146,7 +146,6 @@ class ApiActivity : ComponentActivity() {
             app.setAutoFreezeService()
         }
         packageManager.getLaunchIntentForPackage(pkg)?.let {
-            //  HShortcuts.addDynamicShortcut(pkg)
             startActivity(it)
         } ?: throw ActivityNotFoundException(getString(R.string.activity_not_found))
     }
